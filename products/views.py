@@ -1,5 +1,4 @@
 from rest_framework import mixins, viewsets
-
 from products.models import Product, Category
 from products.serializers import ProductSerializer, CategorySerializer
 

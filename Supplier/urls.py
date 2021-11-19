@@ -12,4 +12,4 @@ urlpatterns = [
     path('swagger/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('offers/', include('offers.urls'), name='offer-list'),
     path('products/', include('products.urls'), name='product-list'),
-]
+
