@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'offers',
     'products',
+    'authentication',
 ]
 
 MIDDLEWARE = [
@@ -78,6 +79,8 @@ DATABASES = {
     }
 }
 
+# Custom user model
+AUTH_USER_MODEL = 'authentication.CustomUser'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
