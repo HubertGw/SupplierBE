@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+from authentication.models import CustomUser
 from django.db import models
 from offers.models import Offer
 

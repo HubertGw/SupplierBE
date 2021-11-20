@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'offers',
     'products',
+    'authentication',
 ]
 
 MIDDLEWARE = [
@@ -44,6 +45,9 @@ MIDDLEWARE = [
 
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
 }
 
 ROOT_URLCONF = 'Supplier.urls'
@@ -78,6 +82,8 @@ DATABASES = {
     }
 }
 
+# Custom user model
+AUTH_USER_MODEL = 'authentication.CustomUser'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
