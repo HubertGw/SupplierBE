@@ -9,7 +9,6 @@ class CustomUser(AbstractUser):
         unique=True,
     )
     is_active = models.BooleanField(default=True)
-    admin = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []  # Email & Password are required by default.
@@ -22,8 +21,3 @@ class CustomUser(AbstractUser):
 
     def __str__(self):
         return self.email
-
-    @property
-    def is_admin(self):
-        "Is the user a admin member?"
-        return self.admin
